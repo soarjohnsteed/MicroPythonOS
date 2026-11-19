@@ -57,7 +57,7 @@ The build script must use this environment for the preload step. Check `MPOS_PRE
 
 System dependencies:
 
-**Fedora / Nobara:**
+**RHEL / Fedora:**
 
 ```bash
 sudo dnf install git wget flex bison gperf python3 python3-devel \
@@ -232,7 +232,7 @@ python3 -m venv ~/.venv-mpos-preload
 
 系统依赖：
 
-**Fedora / Nobara：**
+**RHEL / Fedora：**
 
 ```bash
 sudo dnf install git wget flex bison gperf python3 python3-devel \
