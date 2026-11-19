@@ -1,0 +1,35 @@
+# Normalize all text files to LF in the working tree.
+# This overrides core.autocrlf=true on Windows, which converts LF to CRLF on
+# checkout and breaks every shell script run on Linux/WSL with errors like:
+#   line 3: $'\r': command not found
+#   line 6: syntax error near unexpected token `in\r'
+# (seen when building on Linux from a Windows-cloned tree).
+
+* text=auto eol=lf
+
+# Explicitly mark binaries so git never tries to touch them.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.gif binary
+*.ico binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.mpy binary
+*.mpk binary
+*.ttf binary
+*.otf binary
+*.gz  binary
+*.zip binary
+*.tar binary
+*.pyc binary
+*.fw  binary
+*.bin binary
+*.elf binary
+*.a   binary
+*.o   binary
+
+# upstream rule (must keep)
+tests/qrdecode/*.pgm binary
