@@ -126,7 +126,7 @@ esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 921600 \
   sudo usermod -aG dialout $USER
   ```
 
-- Fedora / Nobara: prevent serial port conflicts:
+- RHEL / Fedora: prevent serial port conflicts:
 
   ```bash
   sudo systemctl mask --now brltty
@@ -301,7 +301,7 @@ esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 921600 \
   sudo usermod -aG dialout $USER
   ```
 
-- Fedora / Nobara 还需避免串口被占用：
+- RHEL / Fedora 还需避免串口被占用：
 
   ```bash
   sudo systemctl mask --now brltty
