@@ -29,6 +29,32 @@ The **AXS15231B + QSPI** display controller requires modifications to several sh
 
 The adaptation consists of 7 files, all included in `Waveshare-ESP32-S3-Touch-LCD-3.5B/`.
 
+### Directory Structure
+
+```text
+MicroPythonOS/
+├── Waveshare-ESP32-S3-Touch-LCD-3.5B/
+│   ├── .gitattributes
+│   └── internal_filesystem/
+│       └── lib/
+│           ├── drivers/
+│           │   ├── display/
+│           │   │   └── axs15231b/
+│           │   │       ├── __init__.py
+│           │   │       ├── _axs15231b_init.py
+│           │   │       └── axs15231b.py
+│           │   └── indev/
+│           │       └── axs15231.py
+│           └── mpos/
+│               ├── main.py
+│               └── board/
+│                   └── waveshare_esp32_s3_touch_lcd_3_5b.py
+│
+├── lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin
+├── README.md
+└── ... (MicroPythonOS upstream files)
+```
+
 ### Usage
 
 **Option 1: Flash the prebuilt firmware**
@@ -203,6 +229,32 @@ AXS15231B: 320x480 qspi=True mode=FULL cf=7 swap=True chunks=10
 由于 **AXS15231B + QSPI** 驱动较特殊，无法仅修改板定义来适配，必须修改一些公用文件，因此没有提交 PR。
 
 适配共涉及 7 个文件，全部放在 `Waveshare-ESP32-S3-Touch-LCD-3.5B/` 目录中。
+
+### 目录结构
+
+```text
+MicroPythonOS/
+├── Waveshare-ESP32-S3-Touch-LCD-3.5B/
+│   ├── .gitattributes
+│   └── internal_filesystem/
+│       └── lib/
+│           ├── drivers/
+│           │   ├── display/
+│           │   │   └── axs15231b/
+│           │   │       ├── __init__.py
+│           │   │       ├── _axs15231b_init.py
+│           │   │       └── axs15231b.py
+│           │   └── indev/
+│           │       └── axs15231.py
+│           └── mpos/
+│               ├── main.py
+│               └── board/
+│                   └── waveshare_esp32_s3_touch_lcd_3_5b.py
+│
+├── lvgl_micropy_ESP32_GENERIC_S3-SPIRAM_OCT-16.bin
+├── README.md
+└── ... (MicroPythonOS upstream files)
+```
 
 ### 用法
 
